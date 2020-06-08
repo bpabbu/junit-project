@@ -8,6 +8,7 @@ pipeline {
     }
 
     stage('compile') {
+      agent any
       steps {
         bat 'mvn compile -Dmaven.main.skip'
       }
