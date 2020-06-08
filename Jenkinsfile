@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
         readMavenPom(file: 'pom.xml')
+        bat 'withMaven(\'mvn install -X\')'
       }
     }
 
