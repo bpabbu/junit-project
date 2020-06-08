@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
         cleanWs(cleanWhenFailure: true)
+        bat 'mvn clean install -X'
       }
     }
 
