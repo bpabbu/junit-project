@@ -2,8 +2,14 @@ pipeline {
   agent any
   stages {
     stage('compile') {
-      steps {
-        bat 'mvn compile'
+      stage ('Compile Stage') {
+				steps {
+					echo "Maven Compile"
+					withMaven(maven : 'apache-maven-3.6.3') {
+						bat 'mvn clean compile'
+						
+					}
+				}
       }
     }
 
