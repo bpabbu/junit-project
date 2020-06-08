@@ -9,7 +9,7 @@ pipeline {
 
     stage('compile') {
       steps {
-        bat 'mvn compile -X'
+        bat 'mvn compile -Dmaven.main.skip'
       }
     }
 
