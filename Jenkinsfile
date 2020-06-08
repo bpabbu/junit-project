@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        cleanWs(cleanWhenFailure: true)
         readMavenPom(file: 'pom.xml')
       }
     }
