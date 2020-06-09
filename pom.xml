@@ -528,13 +528,16 @@
             <build>
                 <plugins>
                     <plugin>
-                        <artifactId>maven-compiler-plugin</artifactId>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
                         <configuration>
                             <compilerArgs>
+				<arg>-verbose</arg>
                                 <arg>-Xlint:unchecked</arg>
                                 <arg>-Xdoclint:accessibility,reference,syntax</arg>
-                            </compilerArgs>
-                        </configuration>
+                            </compilerArgs>                        
+			  </configuration>
                     </plugin>
                     <plugin>
                         <artifactId>maven-javadoc-plugin</artifactId>
