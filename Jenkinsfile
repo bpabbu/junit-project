@@ -4,7 +4,7 @@ pipeline {
     stage('compile') {
       steps {
         echo 'code compilation'
-        bat(script: 'javac -sourcepath src *.java', returnStdout: true, returnStatus: true)
+        bat(script: 'javac *.java', returnStdout: true, returnStatus: true)
       }
     }
 
