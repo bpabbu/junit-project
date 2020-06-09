@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('compile') {
       steps {
+        cleanWs(cleanWhenFailure: true)
         echo 'code compilation'
         bat(script: 'mvn compile -X', returnStdout: true, returnStatus: true)
       }
