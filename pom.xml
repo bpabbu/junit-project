@@ -211,8 +211,9 @@
                 <!--
                 java compiler plugin forked in extra process
                 -->
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+               <groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <source>${jdkVersion}</source>
@@ -225,8 +226,9 @@
                     <debug>true</debug>
                     <fork>true</fork>
                     <compilerArgs>
-                        <arg>-Xlint:unchecked</arg>
-                    </compilerArgs>
+					    <arg>-verbose</arg>
+						<arg>-Xlint:all,-options,-path</arg>
+					</compilerArgs>
                     <maxmem>128m</maxmem>
                 </configuration>
             </plugin>
