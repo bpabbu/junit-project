@@ -8,5 +8,12 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        echo 'Building jar'
+        bat 'mvn install -X'
+      }
+    }
+
   }
 }
