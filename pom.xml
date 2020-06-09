@@ -534,7 +534,7 @@
                         <configuration>
                             <compilerArgs>
 				<arg>-verbose</arg>
-                                <arg>-Xlint:unchecked</arg>
+                                <arg>-Xlint:all,-options,-path</arg>
                                 <arg>-Xdoclint:accessibility,reference,syntax</arg>
                             </compilerArgs>                        
 			  </configuration>
